@@ -30,9 +30,13 @@ app.post("/books", (req,res)=>{
     const values = [
     "title from backend",
     "description from backend",
-    "books covers from backend"];
+    "books covers from backend"
 
-
+];
+    db.query(q [values],(err,data)=>{
+        if(err) return res.json(err)
+        return res.json("Book has been created succesfully")
+       })
 })
 
 
